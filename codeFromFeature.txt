@@ -1,0 +1,16 @@
+@isTest
+public class TestFactory {
+  public static Account getAccount(String name, Boolean doInsert){
+    Account a = new Account(name = name);
+    if(doInsert){
+      insert a;
+    }
+    return a;
+  }
+  public static Contact getContact(Id accountId, String fname, String lname, Boolean doInsert){
+    Contact c = new Contact(firstName = fname, lastName = lname, accountId = accountId);
+    if(doInsert){
+      insert c;
+    }
+    return c;
+  }
